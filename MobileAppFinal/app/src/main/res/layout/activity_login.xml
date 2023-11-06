@@ -28,4 +28,17 @@
         android:layout_height="wrap_content"
         android:text="Login"
         android:onClick="onLoginButtonClick" />
+
+    <Button
+        android:id="@+id/bypassMain"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bypass Login - Main Page" />
+
+    <Button
+        android:id="@+id/bypassDev"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Bypass Login - Developer" />
+
 </LinearLayout>

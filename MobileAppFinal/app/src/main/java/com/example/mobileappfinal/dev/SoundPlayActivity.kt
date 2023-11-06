@@ -1,9 +1,10 @@
-package com.example.mobileappfinal
+package com.example.mobileappfinal.dev
 
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
+import com.example.mobileappfinal.R
 
 class SoundPlayActivity : AppCompatActivity() {
     private var mediaPlayer: MediaPlayer? = null

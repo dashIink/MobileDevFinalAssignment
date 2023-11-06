@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".SoundPlayActivity">
+    tools:context=".dev.SoundPlayActivity">
 
     <Button
         android:id="@+id/playSoundButton"

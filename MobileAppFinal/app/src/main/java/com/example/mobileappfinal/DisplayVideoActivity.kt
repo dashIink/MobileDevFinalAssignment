@@ -3,6 +3,7 @@ package com.example.mobileappfinal
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import android.webkit.WebView
+import com.example.mobileappfinal.R
 
 class DisplayVideoActivity : AppCompatActivity() {
 

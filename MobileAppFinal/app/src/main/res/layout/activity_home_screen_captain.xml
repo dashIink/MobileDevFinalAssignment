@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeScreenCaptain">
+
+    <!-- Map View -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Accept and Reject Buttons -->
+    <Button
+        android:id="@+id/acceptButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accept"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/mapFragment"
+        android:layout_marginTop="16dp" />
+
+    <Button
+        android:id="@+id/rejectButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reject"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/acceptButton"
+        android:layout_marginTop="16dp" />
+
+    <!-- List of Active Calls -->
+    <ListView
+        android:id="@+id/activeCallsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rejectButton"
+        android:layout_marginTop="16dp" />
+
+    <!-- Request Firefighters Button -->
+    <Button
+        android:id="@+id/requestFirefightersButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Request Firefighters"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/activeCallsList"
+        android:layout_marginTop="16dp" />
+
+    <!-- Badge for Unread Notifications -->
+    <TextView
+        android:id="@+id/notificationBadge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3"
+        android:textSize="18sp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/badge_background"
+        android:textColor="#FFFFFF" />
+</RelativeLayout>

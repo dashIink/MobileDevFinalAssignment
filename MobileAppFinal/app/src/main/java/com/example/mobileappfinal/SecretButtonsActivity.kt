@@ -17,7 +17,6 @@ import androidx.core.app.NotificationCompat
 //for auth as it should be one of the first things they see
 class SecretButtonsActivity : AppCompatActivity() {
     var CHANNEL_ID = "1000"
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_secret_buttons)
@@ -54,6 +53,11 @@ class SecretButtonsActivity : AppCompatActivity() {
 
         findViewById<Button>(R.id.button3).setOnClickListener {
             val intent = Intent(this, ListVideosActivity::class.java)
+            startActivity(intent)
+        }
+
+        findViewById<Button>(R.id.button4).setOnClickListener {
+            val intent = Intent(this, NavigationActivity::class.java)
             startActivity(intent)
         }
 

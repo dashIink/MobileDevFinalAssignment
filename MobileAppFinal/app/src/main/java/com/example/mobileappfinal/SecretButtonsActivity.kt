@@ -61,6 +61,11 @@ class SecretButtonsActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        findViewById<Button>(R.id.button7).setOnClickListener {
+            val intent = Intent(this, SoundPlayActivity::class.java)
+            startActivity(intent)
+        }
+
     }
     private fun createNotificationChannel(): NotificationManager? {
         // Create the NotificationChannel, but only on API 26+ because

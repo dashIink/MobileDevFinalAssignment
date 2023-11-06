@@ -20,7 +20,7 @@ import java.util.UUID
 class FireCallDetection : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.firecalldetection)
+        moveTaskToBack(true)
 
         var client = Mqtt5Client.builder()
             .identifier(UUID.randomUUID().toString())
@@ -46,8 +46,6 @@ class FireCallDetection : AppCompatActivity() {
                             if (notificationManager != null) {
                                 CreateNotification(notificationManager)
                             }
-
-
 
 
                         }
@@ -108,5 +106,5 @@ class FireCallDetection : AppCompatActivity() {
 
     }
 
-    }
+}
 

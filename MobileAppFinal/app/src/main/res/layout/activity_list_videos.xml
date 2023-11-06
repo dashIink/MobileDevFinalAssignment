@@ -10,5 +10,5 @@
         android:id="@+id/launchVideoButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Launch Wide Putin" />
+        android:text="Tutorial Video" />
 </LinearLayout>

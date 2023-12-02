@@ -10,11 +10,38 @@
         android:id="@+id/mainPageTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Main Page"
+        android:layout_marginTop="32dp"
+        android:text="Nothing is needed of you at this point"
         android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"/>
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
+<<<<<<< Updated upstream
+=======
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="To View a call's details, please tap one of the list below"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mainPageTextView" />
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="614dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/textView4"
+        tools:layout_editor_absoluteX="1dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+>>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

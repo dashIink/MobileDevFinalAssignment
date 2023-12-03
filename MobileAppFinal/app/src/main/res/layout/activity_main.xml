@@ -18,8 +18,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-<<<<<<< Updated upstream
-=======
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
@@ -43,5 +41,4 @@
             android:orientation="vertical" />
     </ScrollView>
 
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

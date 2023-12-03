@@ -9,8 +9,6 @@ import android.view.View
 import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-<<<<<<< Updated upstream
-=======
 import okhttp3.Call
 import okhttp3.Callback
 import okhttp3.OkHttpClient
@@ -18,7 +16,6 @@ import okhttp3.Request
 import okhttp3.Response
 import org.json.JSONArray
 import java.io.IOException
->>>>>>> Stashed changes
 
 class LoginActivity : AppCompatActivity() {
     val client = OkHttpClient()
@@ -72,7 +69,7 @@ class LoginActivity : AppCompatActivity() {
                             startActivity(intent)
                         }
                         else if(jsonArray[2] == "Captain"){
-                            val intent = Intent(applicationContext, HomeScreenCaptain::class.java)
+                            val intent = Intent(applicationContext, HomeScreenBasic::class.java)
                             permissionLevel.permissionLevel = "Captain"
                             startActivity(intent)
                         }

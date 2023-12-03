@@ -121,9 +121,7 @@ class CallDetailsScreenBasic : AppCompatActivity() {
 
                     }
                     else{
-                        runOnUiThread {
-                            Toast.makeText(applicationContext, "No Active Calls", Toast.LENGTH_LONG).show()
-                        }
+
                     }
 
 

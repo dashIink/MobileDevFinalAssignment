@@ -14,7 +14,7 @@ class ListVideosActivity : AppCompatActivity() {
         val launchVideoButton = findViewById<View>(R.id.launchVideoButton)
 
         launchVideoButton.setOnClickListener {
-            val videoUrl = "https://www.youtube.com/embed/EEvopkbc4FE"
+            val videoUrl = "https://www.youtube.com/embed/Zx_jHmlXJlo?si=kLwfw5UXsxlvDPLo"
             val intent = Intent(this, DisplayVideoActivity::class.java)
             intent.putExtra("VIDEO_URL", videoUrl)
             startActivity(intent)

@@ -6,6 +6,7 @@ import android.util.Log
 import android.widget.ArrayAdapter
 import android.widget.Button
 import android.widget.ListView
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentActivity
@@ -43,11 +44,16 @@ class HomeScreenBasic : AppCompatActivity() {
             //Pick Up tomorrow, Send to alert Details page with call ID, get info from server
             val bundle = Bundle()
             bundle.putString("ID", callID)
-            bundle.putString("Level", "Basic")
+            bundle.putString("Level", permissionLevel.permissionLevel)
 
 
             val intent = Intent(this, AlertDetails::class.java)
             intent.putExtras(bundle)
+            startActivity(intent)
+        }
+
+        findViewById<TextView>(R.id.notificationBadge).setOnClickListener(){
+            val intent = Intent(this, DisplayVideoActivity::class.java)
             startActivity(intent)
         }
 

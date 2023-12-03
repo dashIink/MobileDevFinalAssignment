@@ -73,7 +73,7 @@ class FireCallDetectionService : Service()  {
         val bundle = Bundle()
         bundle.putString("ID", callID)
         Log.d("Bundle", callID)
-        bundle.putString("Level", "Basic")
+        bundle.putString("Level", permissionLevel.permissionLevel)
         val intent = Intent(this, AlertDetails::class.java).apply {
             flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
             putExtras(bundle)

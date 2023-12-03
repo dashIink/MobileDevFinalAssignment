@@ -10,11 +10,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-<<<<<<< Updated upstream
-        android:layout_marginTop="32dp"
-=======
         android:layout_marginTop="64dp"
->>>>>>> Stashed changes
         android:text="Alert Details"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +37,7 @@
         app:layout_constraintTop_toBottomOf="@+id/location" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/rejectButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="70dp"
@@ -71,8 +67,6 @@
         android:text="Reporting Stations:"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/type" />
-<<<<<<< Updated upstream
-=======
 
     <Button
         android:id="@+id/back"
@@ -84,5 +78,4 @@
         app:icon="?attr/actionModeCloseDrawable"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
->>>>>>> Stashed changes
 </androidx.constraintlayout.widget.ConstraintLayout>

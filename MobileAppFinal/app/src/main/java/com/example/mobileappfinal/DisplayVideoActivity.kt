@@ -12,7 +12,7 @@ class DisplayVideoActivity : AppCompatActivity() {
         val videoWebView = findViewById<WebView>(R.id.videoWebView)
         val webSettings = videoWebView.settings
         webSettings.javaScriptEnabled = true
-        val videoUrl = intent.getStringExtra("VIDEO_URL")
+        val videoUrl = "https://www.youtube.com/embed/Zx_jHmlXJlo?si=kLwfw5UXsxlvDPLo"
         if (videoUrl != null) {
             videoWebView.loadUrl(videoUrl)
         } else {

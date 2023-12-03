@@ -79,8 +79,6 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-<<<<<<< Updated upstream
-=======
         <activity
             android:name=".CallDetailsScreenBasic"
             android:exported="true">
@@ -97,6 +95,14 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".CallDetailsScreenCaptain"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="intent_id" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
         <service
             android:name=".FireCallDetectionService"
             android:enabled="true"
@@ -104,7 +110,7 @@
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyBeOgGLe2uX2YHkOB5e5MtjQ_oOoDgqaNk" />
->>>>>>> Stashed changes
     </application>
+
 
 </manifest>

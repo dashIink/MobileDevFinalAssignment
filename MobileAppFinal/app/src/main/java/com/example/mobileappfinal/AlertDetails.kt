@@ -1,6 +1,7 @@
 package com.example.mobileappfinal
 
 import android.content.Intent
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -40,6 +41,10 @@ class AlertDetails : AppCompatActivity() {
             bundle.putString("report", itemList[6])
             bundle.putString("callID", itemList[0])
             run("http://10.0.2.2/FireFighterTestServer/FireFighterAPI.php?function=UpdateStat&ID=${permissionLevel.id}&CallID=${itemList[0]}&Status=Accepted")
+
+            var mediaPlayer = MediaPlayer.create(this, R.raw.confirm)
+            mediaPlayer.start()
+            Thread.sleep(400)
 
             if(permissionLevel.permissionLevel == "Captain"){
                 val intent = Intent(this, CallDetailsScreenCaptain::class.java)

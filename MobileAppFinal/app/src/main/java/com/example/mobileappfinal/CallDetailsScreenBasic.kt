@@ -1,6 +1,11 @@
 package com.example.mobileappfinal
 
+import android.content.Context
 import android.content.Intent
+import android.hardware.Sensor
+import android.hardware.SensorEvent
+import android.hardware.SensorEventListener
+import android.hardware.SensorManager
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.FragmentActivity
@@ -24,8 +29,10 @@ import okhttp3.Response
 import org.json.JSONArray
 import java.io.IOException
 
-class CallDetailsScreenBasic : AppCompatActivity() {
+class CallDetailsScreenBasic : AppCompatActivity(), SensorEventListener {
     val client = OkHttpClient()
+    private lateinit var sensorManager: SensorManager
+    private var temperatureSensor: Sensor? = null
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_call_details_screen_basic)
@@ -73,7 +80,21 @@ class CallDetailsScreenBasic : AppCompatActivity() {
         // Modify this to get stations from database through HTML call
         findViewById<TextView>(R.id.report).text = "Reporting Stations: "+ report
 
+        sensorManager = getSystemService(Context.SENSOR_SERVICE) as SensorManager
+        temperatureSensor = sensorManager.getDefaultSensor(Sensor.TYPE_AMBIENT_TEMPERATURE)
+
+        if (temperatureSensor == null) {
+            // Handle the case where the temperature sensor is not available on the device
+            findViewById<TextView>(R.id.textViewTemperature).text = "Temperature sensor not available"
+        }
+
         run("http://10.0.2.2/FireFighterTestServer/FireFighterAPI.php?function=UpdateStat&ID=${permissionLevel.id}&CallID=$callID&Status=Accepted")
+    }
+    override fun onResume() {
+        super.onResume()
+        temperatureSensor?.let { sensor ->
+            sensorManager.registerListener(this, sensor, SensorManager.SENSOR_DELAY_NORMAL)
+        }
     }
 
     private fun showConfirmationDialog(callID: String) {
@@ -136,5 +157,18 @@ class CallDetailsScreenBasic : AppCompatActivity() {
             }
         })
 
+    }
+
+    override fun onSensorChanged(event: SensorEvent?) {
+        event?.let {
+            if (it.sensor.type == Sensor.TYPE_AMBIENT_TEMPERATURE) {
+                val currentTemperature = it.values[0]
+                findViewById<TextView>(R.id.textViewTemperature).text = "Temperature: $currentTemperature °C"
+            }
+        }
+    }
+
+    override fun onAccuracyChanged(sensor: Sensor?, accuracy: Int) {
+        
     }
 }
